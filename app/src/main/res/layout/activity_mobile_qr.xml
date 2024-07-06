@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".mobileQr">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/light_violet"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="left"
+        />
+
+    <LinearLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:padding="16dp"
+        tools:ignore="ExtraText">
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:id="@+id/user"
+            android:hint="@string/user"
+            android:textColorHint="@color/black"
+            android:drawableLeft="@drawable/baseline_smartphone_24"
+            android:paddingStart="14dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:inputType="textAutoCorrect"
+            android:background="@color/chalk_white"
+            android:imeOptions="actionDone"
+            />
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:id="@+id/mobilenumber"
+        android:hint="@string/mobile"
+            android:textColorHint="@color/black"
+        android:drawableLeft="@drawable/baseline_smartphone_24"
+        android:paddingStart="14dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal"
+        android:inputType="phone"
+        android:imeOptions="actionDone"
+            android:background="@color/chalk_white"
+        />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Generate"
+            android:id="@+id/generate"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/download_layout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:background="@color/chalk_white"
+        android:contentDescription="@string/mobile">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/download"
+            android:id="@+id/download"/>
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_height="260dp"
+            android:src="@drawable/qrcode_scan"
+            android:id="@+id/generatedQR"
+            android:layout_width="match_parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/qr_info"
+            android:drawableLeft="@drawable/baseline_phonelink_ring_24"
+            android:paddingStart="30dp"
+            android:textSize="20dp"
+            android:text="Scan for Call: "
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/cadmium_violet"
+        android:layout_gravity="bottom"
+        tools:context=".mobileQr">
+        <!-- Left FloatingActionButton -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="66dp"
+            android:backgroundTint="@color/cadmium_violet"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/qrcode_scan"
+            android:tint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <!-- Right FloatingActionButton -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="66dp"
+            android:backgroundTint="@color/chalk_white"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/baseline_menu_24"
+            android:tint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
